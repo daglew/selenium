@@ -1,5 +1,5 @@
 # selenium
- "In this repository I will learn the selenium WebDriver framework."
+ "In this repository I will learn Selenium WebDriver framework."
 
 ## Table of contents
 * [Installation selenium](#installation-selenium)
