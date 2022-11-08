@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from paths import Paths
 
 
-class FindByIdName():
+class FindByXpathCss():
     def __init__(self):
         self.page = "https://courses.letskodeit.com/practice"
         self.driver = webdriver.Chrome(executable_path=Paths.CHROMEDRIVER_PATH)
@@ -12,17 +12,17 @@ class FindByIdName():
         self.driver.implicitly_wait(15)
 
     def test(self):
-        element_by_id = self.driver.find_element(By.ID, "displayed-text")
+        element_by_id = self.driver.find_element(By.XPATH, "//input[@id='displayed-text']")
         if element_by_id is not None:
-            print("The specified item was found by id.")
+            print("The specified item was found by xpath.")
 
-        element_by_name = self.driver.find_element(By.NAME, "show-hide")
+        element_by_name = self.driver.find_element(By.CSS_SELECTOR, "#displayed-text")
         if element_by_name is not None:
-            print("The specified item was found by name.")
+            print("The specified item was found by css selector.")
         self.driver.close()
 
 
-test_find_by_id_and_name = FindByIdName()
+test_find_by_id_and_name = FindByXpathCss()
 test_find_by_id_and_name.test()
 
 
