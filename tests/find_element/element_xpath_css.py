@@ -12,17 +12,17 @@ class FindByXpathCss():
         self.driver.implicitly_wait(15)
 
     def test(self):
-        element_by_id = self.driver.find_element(By.XPATH, "//input[@id='displayed-text']")
-        if element_by_id is not None:
+        element_by_xpath = self.driver.find_element(By.XPATH, "//input[@id='displayed-text']")
+        if element_by_xpath is not None:
             print("The specified item was found by xpath.")
 
-        element_by_name = self.driver.find_element(By.CSS_SELECTOR, "#displayed-text")
-        if element_by_name is not None:
+        element_by_css_selector = self.driver.find_element(By.CSS_SELECTOR, "#displayed-text")
+        if element_by_css_selector is not None:
             print("The specified item was found by css selector.")
         self.driver.close()
 
 
-test_find_by_id_and_name = FindByXpathCss()
-test_find_by_id_and_name.test()
+test_find_by_xpath_and_css_selector = FindByXpathCss()
+test_find_by_xpath_and_css_selector.test()
 
 
