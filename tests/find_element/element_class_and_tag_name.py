@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from paths import Paths
 
 
-class FindByClassTagName():
+class FindByClassTagName:
     def __init__(self):
         self.page = "https://courses.letskodeit.com/practice"
         self.driver = webdriver.Chrome(executable_path=Paths.CHROMEDRIVER_PATH)
@@ -30,5 +30,3 @@ class FindByClassTagName():
 
 test_find_by_class_name_and_tag_name = FindByClassTagName()
 test_find_by_class_name_and_tag_name.test()
-
-

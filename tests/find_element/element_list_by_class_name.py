@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from paths import Paths
 
 
-class ListOfElements():
+class ListOfElements:
     def __init__(self):
         self.page = "https://courses.letskodeit.com/practice"
         self.driver = webdriver.Chrome(executable_path=Paths.CHROMEDRIVER_PATH)
@@ -26,5 +26,3 @@ class ListOfElements():
 
 test_find_list_of_elements = ListOfElements()
 test_find_list_of_elements.test()
-
-

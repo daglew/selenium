@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from paths import Paths
 
 
-class FindByLinkText():
+class FindByLinkText:
     def __init__(self):
         self.page = "https://courses.letskodeit.com/practice"
         self.driver = webdriver.Chrome(executable_path=Paths.CHROMEDRIVER_PATH)
@@ -24,5 +24,3 @@ class FindByLinkText():
 
 test_find_by_link_text_partial_link_text = FindByLinkText()
 test_find_by_link_text_partial_link_text.test()
-
-

@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from paths import Paths
 
 
-class FindByIdName():
+class FindByIdName:
     def __init__(self):
         self.page = "https://courses.letskodeit.com/practice"
         self.driver = webdriver.Chrome(executable_path=Paths.CHROMEDRIVER_PATH)
@@ -24,5 +24,3 @@ class FindByIdName():
 
 test_find_by_id_and_name = FindByIdName()
 test_find_by_id_and_name.test()
-
-

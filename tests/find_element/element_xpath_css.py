@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from paths import Paths
 
 
-class FindByXpathCss():
+class FindByXpathCss:
     def __init__(self):
         self.page = "https://courses.letskodeit.com/practice"
         self.driver = webdriver.Chrome(executable_path=Paths.CHROMEDRIVER_PATH)
@@ -24,5 +24,3 @@ class FindByXpathCss():
 
 test_find_by_xpath_and_css_selector = FindByXpathCss()
 test_find_by_xpath_and_css_selector.test()
-
-
