@@ -33,9 +33,11 @@ class XpathDynamic:
         # search course
         click_all_courses = self.driver.find_element(By.LINK_TEXT, "ALL COURSES")
         click_all_courses.click()
-
-        click_search = self.driver.find_element(By.ID, "search")
-        # JavaScript
+        time.sleep(2)
+        click_search = self.driver.find_element(By.ID, "search-courses")
+        click_search.click()
+        click_search.clear()
+        click_search.send_keys("JavaScript")
 
         self.driver.close()
 
