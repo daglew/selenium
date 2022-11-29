@@ -29,6 +29,9 @@ class ImplicitWait:
         log_in_button = self.driver.find_element(By.NAME, "commit")
         log_in_button.click()
 
+        time.sleep(5)
+        self.driver.close()
+
 
 run_test_implicit_wait = ImplicitWait()
 run_test_implicit_wait.test()
