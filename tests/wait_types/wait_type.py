@@ -1,7 +1,6 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *
-
 from tests.utilities.helpers import Helpers
 
 
@@ -13,7 +12,7 @@ class WaitType:
     def for_element_wait(self, locator, type_locator="id", timeout=10, poll_frequency=0.5):
         element = None
         try:
-            by_type_element =self.helpers.get_element_type(locator_type=type_locator)
+            by_type_element = self.helpers.get_element_type(locator_type=type_locator)
 
             print(f"Waiting for a maximum of: {str(timeout)} seconds for element to be visible.")
             wait = WebDriverWait(self.driver, timeout=timeout, poll_frequency=poll_frequency,

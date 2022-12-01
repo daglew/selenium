@@ -1,4 +1,4 @@
-from selenium import  webdriver
+from selenium import webdriver
 
 from paths import Paths
 from tests.wait_types.wait_type import WaitType
