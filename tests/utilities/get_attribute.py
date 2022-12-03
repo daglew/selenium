@@ -13,7 +13,7 @@ class GetAttribute:
         self.driver.implicitly_wait(15)
         self.driver.get(self.page)
 
-    def test(self):
+    def value_attribute(self):
         input_enter_your_name = self.driver.find_element(By.ID, "name")
         input_enter_your_name_result = input_enter_your_name.get_attribute("class")
 
@@ -23,5 +23,5 @@ class GetAttribute:
 
 
 run_test_get_attribute = GetAttribute()
-run_test_get_attribute.test()
+run_test_get_attribute.value_attribute()
 

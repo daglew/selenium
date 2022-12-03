@@ -12,7 +12,7 @@ class BrowserInteractions:
         self.driver.get(self.page)
         self.driver.implicitly_wait(15)
 
-    def test(self):
+    def features_on_the_page(self):
         # get title
         title = self.driver.title
         print("Current page title is: " + title)
@@ -41,5 +41,5 @@ class BrowserInteractions:
 
 
 test_page = BrowserInteractions()
-test_page.test()
+test_page.features_on_the_page()
 

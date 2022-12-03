@@ -11,7 +11,7 @@ class GetText:
         self.driver.get(self.page)
         self.driver.implicitly_wait(15)
 
-    def test(self):
+    def get_text_test(self):
         switch_tab_example = self.driver.find_element(By.ID, "opentab")
         text_element = switch_tab_example.text
         print(f"The item text is: {text_element}")
@@ -20,5 +20,5 @@ class GetText:
 
 
 run_test_get_text = GetText()
-run_test_get_text.test()
+run_test_get_text.get_text_test()
 

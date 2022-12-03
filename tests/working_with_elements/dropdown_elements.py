@@ -1,5 +1,6 @@
 import time
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from paths import Paths
 
@@ -12,8 +13,8 @@ class DropdownElements:
         self.driver.get(self.page)
         self.driver.implicitly_wait(4)
 
-    def test(self):
-        element = self.driver.find_element_by_id("carselect")
+    def choose_selector(self):
+        element = self.driver.find_element(By.ID, "carselect")
         choose = Select(element)
 
         choose.select_by_value("bmw")
@@ -36,4 +37,4 @@ class DropdownElements:
 
 
 run_test_dropdown_elements = DropdownElements()
-run_test_dropdown_elements.test()
+run_test_dropdown_elements.choose_selector()
