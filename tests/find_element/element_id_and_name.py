@@ -11,7 +11,7 @@ class FindByIdName:
         self.driver.get(self.page)
         self.driver.implicitly_wait(15)
 
-    def test(self):
+    def searching_by_id_name(self):
         element_by_id = self.driver.find_element(By.ID, "displayed-text")
         if element_by_id is not None:
             print("The specified item was found by id.")
@@ -23,4 +23,4 @@ class FindByIdName:
 
 
 test_find_by_id_and_name = FindByIdName()
-test_find_by_id_and_name.test()
+test_find_by_id_and_name.searching_by_id_name()

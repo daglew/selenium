@@ -13,8 +13,8 @@ class ImplicitWait:
         self.driver.implicitly_wait(15)
         self.driver.get(self.page)
 
-    def test(self):
-        sign_in = self.driver.find_element(By.LINK_TEXT, "Login")
+    def implicit_wait_log_in(self):
+        sign_in = self.driver.find_element(By.XPATH, "//a[@href='/sign_in']")
         sign_in.click()
         time.sleep(3)
 
@@ -26,7 +26,7 @@ class ImplicitWait:
         password.clear()
         password.send_keys("abcabc")
 
-        log_in_button = self.driver.find_element(By.NAME, "commit")
+        log_in_button = self.driver.find_element(By.XPATH, "//input[@name='commit']")
         log_in_button.click()
 
         time.sleep(5)
@@ -34,5 +34,5 @@ class ImplicitWait:
 
 
 run_test_implicit_wait = ImplicitWait()
-run_test_implicit_wait.test()
+run_test_implicit_wait.implicit_wait_log_in()
 

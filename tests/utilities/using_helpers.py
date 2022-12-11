@@ -7,7 +7,7 @@ from paths import Paths
 
 class UsingHelpers:
 
-    def test(self):
+    def writing_text(self):
         page = "https://courses.letskodeit.com/practice"
         driver = webdriver.Chrome(executable_path=Paths.CHROMEDRIVER_PATH)
         driver.maximize_window()
@@ -25,4 +25,4 @@ class UsingHelpers:
 
 
 run_test_using_helpers = UsingHelpers()
-run_test_using_helpers.test()
+run_test_using_helpers.writing_text()

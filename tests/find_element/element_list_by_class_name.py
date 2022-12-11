@@ -10,8 +10,8 @@ class ListOfElements:
         self.driver.get(self.page)
         self.driver.implicitly_wait(15)
 
-    def test(self):
-        element_list_by_class_name = self.driver.find_elements_by_class_name("inputs")
+    def searching_list_of_elements(self):
+        element_list_by_class_name = self.driver.find_elements(By.CLASS_NAME, "inputs")
         length_class_name = len(element_list_by_class_name)
         if element_list_by_class_name is not None:
             print(f"The number of items in the list by class name is: " + str(length_class_name))
@@ -24,4 +24,4 @@ class ListOfElements:
 
 
 test_find_list_of_elements = ListOfElements()
-test_find_list_of_elements.test()
+test_find_list_of_elements.searching_list_of_elements()

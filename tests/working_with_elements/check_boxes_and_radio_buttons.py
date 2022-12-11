@@ -1,5 +1,7 @@
 import time
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+
 from paths import Paths
 
 
@@ -12,26 +14,26 @@ class CheckBoxesAndRadioButtons:
         self.driver.implicitly_wait(4)
 
     def test_checkbox_and_radio_button(self):
-        bmw_radio_button = self.driver.find_element_by_id("bmwradio")
+        bmw_radio_button = self.driver.find_element(By.ID, "bmwradio")
         bmw_radio_button.click()
 
         time.sleep(4)
-        beznz_radio_button = self.driver.find_element_by_id("benzradio")
+        beznz_radio_button = self.driver.find_element(By.ID, "benzradio")
         beznz_radio_button.click()
 
         time.sleep(4)
-        honda_radio_button = self.driver.find_element_by_id("hondaradio")
+        honda_radio_button = self.driver.find_element(By.ID, "hondaradio")
         honda_radio_button.click()
 
-        bmw_checkbox = self.driver.find_element_by_id("bmwcheck")
+        bmw_checkbox = self.driver.find_element(By.ID, "bmwcheck")
         bmw_checkbox.click()
 
         time.sleep(4)
-        beznz_checkbox = self.driver.find_element_by_id("benzcheck")
+        beznz_checkbox = self.driver.find_element(By.ID, "benzcheck")
         beznz_checkbox.click()
 
         time.sleep(4)
-        honda_checkbox = self.driver.find_element_by_id("hondacheck")
+        honda_checkbox = self.driver.find_element(By.ID, "hondacheck")
         honda_checkbox.click()
 
         print("Is the radio button selected?" + str(bmw_radio_button.is_selected()))

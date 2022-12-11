@@ -12,7 +12,7 @@ class ClickAndSendKeys:
         self.driver.get(self.page)
         self.driver.implicitly_wait(15)
 
-    def test(self):
+    def account_login(self):
         login_link = self.driver.find_element(By.XPATH, "//div[@id='navbar-inverse-collapse']/div//a[@href='/login']")
         login_link.click()
 
@@ -33,5 +33,5 @@ class ClickAndSendKeys:
 
 
 test_page = ClickAndSendKeys()
-test_page.test()
+test_page.account_login()
 

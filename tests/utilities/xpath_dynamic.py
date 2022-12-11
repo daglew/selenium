@@ -13,7 +13,7 @@ class XpathDynamic:
         self.driver.get(self.page)
         self.driver.implicitly_wait(15)
 
-    def test(self):
+    def login_via_dynamic_path(self):
         # open page and login
         sign_in = self.driver.find_element(By.LINK_TEXT, "SIGN IN")
         sign_in.click()
@@ -52,5 +52,5 @@ class XpathDynamic:
 
 
 run_test_xpath_dynamic = XpathDynamic()
-run_test_xpath_dynamic.test()
+run_test_xpath_dynamic.login_via_dynamic_path()
 

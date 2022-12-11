@@ -11,7 +11,7 @@ class FindByLinkText:
         self.driver.get(self.page)
         self.driver.implicitly_wait(15)
 
-    def test(self):
+    def searching_by_link_text(self):
         element_by_link_text = self.driver.find_element(By.LINK_TEXT, "SUPPORT")
         if element_by_link_text is not None:
             print("The specified item was found by link text.")
@@ -23,4 +23,4 @@ class FindByLinkText:
 
 
 test_find_by_link_text_partial_link_text = FindByLinkText()
-test_find_by_link_text_partial_link_text.test()
+test_find_by_link_text_partial_link_text.searching_by_link_text()

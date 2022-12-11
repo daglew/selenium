@@ -1,5 +1,4 @@
 from selenium import webdriver
-
 from paths import Paths
 from tests.wait_types.wait_type import WaitType
 import time
@@ -13,7 +12,7 @@ class ExplicitWait2:
         self.driver.implicitly_wait(15)
         self.driver.get(self.page)
 
-    def test(self):
+    def maximum_wait_item_to_appear(self):
         wait = WaitType(self.driver)
         element = wait.for_element_wait(locator="//a[@href='/sign_in']", type_locator="xpath")
         element.click()
@@ -22,6 +21,6 @@ class ExplicitWait2:
         self.driver.close()
 
 
-run_test_explicit_wait2= ExplicitWait2()
-run_test_explicit_wait2.test()
+run_test_explicit_wait2 = ExplicitWait2()
+run_test_explicit_wait2.maximum_wait_item_to_appear()
 

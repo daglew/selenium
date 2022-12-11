@@ -1,5 +1,7 @@
 import time
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+
 from paths import Paths
 
 
@@ -11,29 +13,29 @@ class HiddenElements:
         self.driver.get(self.page)
         self.driver.implicitly_wait(4)
 
-    def test(self):
-        box_text_element = self.driver.find_element_by_id("displayed-text")
+    def text_visible(self):
+        box_text_element = self.driver.find_element(By.ID, "displayed-text")
         box_text_state = box_text_element.is_displayed()
 
-        print(f"Text is vidible? {box_text_state}")
+        print(f"Text is visible? {box_text_state}")
         time.sleep(2)
 
-        self.driver.find_element_by_id("hide-textbox").click()
+        self.driver.find_element(By.ID, "hide-textbox").click()
 
         box_text_state = box_text_element.is_displayed()
 
-        print(f"Text is vidible? {box_text_state}")
+        print(f"Text is visible? {box_text_state}")
 
         time.sleep(2)
 
-        self.driver.find_element_by_id("show-textbox").click()
+        self.driver.find_element(By.ID, "show-textbox").click()
 
         box_text_state = box_text_element.is_displayed()
 
-        print(f"Text is vidible? {box_text_state}")
+        print(f"Text is visible? {box_text_state}")
 
         self.driver.close()
 
 
 run_test_hidden_elements = HiddenElements()
-run_test_hidden_elements.test()
+run_test_hidden_elements.text_visible()

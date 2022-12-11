@@ -12,7 +12,7 @@ class ListElementsWorking:
         self.driver.get(self.page)
         self.driver.implicitly_wait(4)
 
-    def test(self):
+    def selecting_button(self):
         list_elements_radio_button = self.driver.find_elements(By.XPATH, "//input[contains(@type,'radio') and contains(@name, 'cars')]")
         lenght_list_radio_button = len(list_elements_radio_button)
         print(f"The length of the list is: {lenght_list_radio_button}")
@@ -28,5 +28,5 @@ class ListElementsWorking:
 
 
 run_test_list_elements = ListElementsWorking()
-run_test_list_elements.test()
+run_test_list_elements.selecting_button()
 

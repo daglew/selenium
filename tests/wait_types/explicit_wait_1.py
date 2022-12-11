@@ -18,7 +18,7 @@ class ExplicitWait:
         # self.driver.execute_script("window.location = 'https://letskodeit.teachable.com/';")
         # self.driver.find_element(By.XPATH, "//a[text()='Login]").click
 
-    def test(self):
+    def explicit_wait_test(self):
         self.driver.execute_script("window.location = 'https://letskodeit.teachable.com/';")
         self.driver.find_element(By.XPATH, "//a[@href='/sign_in']").click()
 
@@ -28,7 +28,7 @@ class ExplicitWait:
         #                                          ElementNotVisibleException,
         #                                          ElementNotSelectableException])
         #
-        # element = wait.until(EC.visibility_of_element_located((By.XPATH, "//a[text()='Login]")))
+        # element = wait.until(EC.visibility_of_element_located((By.XPATH, "//a[text()='/sign_in]")))
         # element.click()
 
         time.sleep(5)

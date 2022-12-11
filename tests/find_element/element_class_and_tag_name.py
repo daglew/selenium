@@ -13,7 +13,7 @@ class FindByClassTagName:
         self.driver.get(self.page)
         self.driver.implicitly_wait(15)
 
-    def test(self):
+    def searching_by_tag_name(self):
         element_by_class_name = self.driver.find_element(By.CLASS_NAME, "inputs")
         if element_by_class_name is not None:
             print("The specified item was found by class name.")
@@ -24,9 +24,8 @@ class FindByClassTagName:
             print("The specified item was found by tag name:" + element_by_tag_name.text)
 
         time.sleep(10)
-
         self.driver.close()
 
 
 test_find_by_class_name_and_tag_name = FindByClassTagName()
-test_find_by_class_name_and_tag_name.test()
+test_find_by_class_name_and_tag_name.searching_by_tag_name()
