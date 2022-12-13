@@ -13,13 +13,14 @@ class SwitchToFrame:
         self.driver.execute_script("window.scrollBy(0, 1000);")
 
     def test_switch_to_frame(self):
-        # self.driver.switch_to.frame(frame_reference="courses-iframe")
-        self.driver.switch_to.frame(frame_reference="zen_all_courses_dynamic")
-        # self.driver.switch_to.frame(frame_reference="courses-iframe")
+        self.driver.switch_to.frame("courses-iframe")
         time.sleep(2)
 
-        searhc_box = self.driver.find_element(By.ID, "search")
-        searhc_box.send_keys("python")
+        elements = self.driver.find_elements(By.ID, "search")
+        for element in elements:
+            if element.get_attribute("name") == "course":
+                element.send_keys("python")
+
         time.sleep(2)
 
         self.driver.switch_to.default_content()
