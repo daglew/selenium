@@ -10,9 +10,9 @@ class SwitchToFrame:
         self.driver.maximize_window()
         self.page = "https://courses.letskodeit.com/practice"
         self.driver.get(self.page)
-        self.driver.execute_script("window.scrollBy(0, 1000);")
 
     def test_switch_to_frame(self):
+        self.driver.execute_script("window.scrollBy(0, 1000);")
         self.driver.switch_to.frame("courses-iframe")
         time.sleep(2)
 
