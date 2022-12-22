@@ -21,7 +21,7 @@ class DemoLogger:
         #  add cosole handler
         logger.addHandler(chandler)
 
-        #  mogging messagnes
+        #  logging messagnes
         logger.debug('message debug')
         logger.info('message info')
         logger.warning('message warning')
