@@ -7,7 +7,7 @@ class DemoLoggerConfig:
 
     def demo_logger_conf(self):
         # create logger
-        logging.config.fileConfig('logging.conf')
+        logging.config.fileConfig("logging")
         logger = logging.getLogger(DemoLoggerConfig.__name__)
 
         #  logging messagnes
