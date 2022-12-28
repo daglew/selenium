@@ -1,0 +1,29 @@
+[loggers]
+keys=root,DemoLoggerConfig
+
+[handlers]
+keys=file_handler
+
+[formatters]
+keys=simple_formatter
+
+[logger_root]
+level=DEBUG
+handlers=file_handler
+
+[logger_DemoLoggerConfig]
+level=INFO
+handlers=file_handler
+qualname=demoLogger
+propagate=0
+
+[handler_file_handler]
+class=FileHandler
+level=DEBUG
+formatter=simple_formatter
+args=('test.log', 'w')
+
+[formatter_simple_formatter]
+format=%(asctime)s - %(name)s - %(levelname)s - %(message)s
+datefmt=%m/%d/%Y %I:%M:%S %p
+
