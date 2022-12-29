@@ -1,2 +1,5 @@
 venv/
 .idea/
+__pycache__/
+tests/utilities/__pycache__/
+tests/wait_types/__pycache__/

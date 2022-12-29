@@ -8,7 +8,7 @@ def custom_logger(log_level):
 
     logger.setLevel(logging.DEBUG)
 
-    file_handler = logging.FileHandler("{0}.log".format(logger_name), mode="w")
+    file_handler = logging.FileHandler(f"logs/{logger_name}.log", mode="w")
     file_handler.setLevel(log_level)
 
     formatter = logging.Formatter('%(asctime)s: %(levelname)s: %(message)s',
@@ -17,4 +17,6 @@ def custom_logger(log_level):
     logger.addHandler(file_handler)
 
     return logger
+
+def delete_logs_after_execution():
 

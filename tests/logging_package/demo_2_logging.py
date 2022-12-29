@@ -33,4 +33,5 @@ demo_logging = Demo2Logging()
 demo_logging.method_1()
 demo_logging.method_2()
 demo_logging.method_3()
+cust_log.delete_logs_after_execution()
 
