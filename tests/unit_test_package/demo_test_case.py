@@ -1,14 +1,15 @@
 import unittest
 
 
-class DemoTestCase(unittest.TestCase):
+class TestCaseDemo(unittest.TestCase):
+
     def setUp(self):
         print("I run once before each test.")
 
-    def method_a_test(self):
+    def test_method_a(self):
         print("Run method A.")
 
-    def method_b_test(self):
+    def test_method_b(self):
         print("Run method B.")
 
     def tearDown(self):
