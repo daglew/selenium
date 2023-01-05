@@ -12,7 +12,7 @@ class DemoAssert(unittest.TestCase):
     def test_assertEqual(self):
         a = "Test"
         b = "Test"
-        self.assertEqual(a, b, msg="'a' is not equal to 'b'")
+        self.assertEqual(a, b, msg="'a' is not equal to 'b'") 
 
 
 if __name__ == '__main__':
