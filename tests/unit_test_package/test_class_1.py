@@ -27,6 +27,7 @@ class TestClass1(unittest.TestCase):
         print("Class 1 -> class level tearDown.")
         print("*-" * 20)
 
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
 
