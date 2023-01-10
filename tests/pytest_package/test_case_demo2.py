@@ -1,16 +1,17 @@
 import pytest
 
+
 @pytest.fixture()
 def setUp():
-    print(" Runing once before every method.")
+    print(" Runing demo2 setUp.")
     yield
-    print(" Runing once after every method.")
+    print(" Runing demo2 tearDown.")
 
 
-def test_method_a(setUp):
-    print(" Runing method A.")
+def test_demo2_methoda(setUp):
+    print(" Runing demo2 method A.")
 
 
-def test_method_b(setUp):
-    print(" Runing method B.")
+def test_demo2_methodb(setUp):
+    print(" Runing demo2 method B.")
 
