@@ -2,13 +2,13 @@ import pytest
 
 
 @pytest.fixture()
-def setUp():
+def setup():
     print("Runing once before every method.")
 
 
-def test_method_a(setUp):
+def test_method_a(setup):
     print("Runing method A.")
 
 
-def test_method_b(setUp):
+def test_method_b(setup):
     print("Runing method B.")

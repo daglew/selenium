@@ -12,15 +12,16 @@ import pytest
 
 
 @pytest.fixture()
-def setUp():
-    print(" Runing demo3 setUp.")
+def setup():
+    print(" Runing demo3 setup.")
     yield
-    print(" Runing demo3 tearDown.")
+    print(" Runing demo3 teardown.")
 
 
-def test_demo3_methoda(setUp):
+def test_demo3_methoda(setup):
     print(" Runing demo3 method A.")
 
 
-def test_demo3_methodb(setUp):
+def test_demo3_methodb(setup):
     print(" Runing demo3 method B.")
+
