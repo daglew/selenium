@@ -14,7 +14,9 @@ import pytest
 #     yield
 #     print("Runing conftest demo_one_time before every method teardown.")
 #
-
+# """
+# command line
+# """
 @pytest.fixture()
 def setup():
     print("Running method level setup.")
@@ -24,7 +26,7 @@ def setup():
 
 @pytest.fixture(scope="module")
 def one_time_setup(browser, ostype):
-    print("Running one time setup.")
+    print("Running one_time_setup.")
     if browser == "firefox":
         print("Running tests on FF.")
     else:
@@ -33,12 +35,17 @@ def one_time_setup(browser, ostype):
     print("Running one time teardown.")
 
 
-def pytest_add_option(parser):
+def pytest_addoption(parser):
     parser.addoption("--browser")
     parser.addoption("--ostype", help="Type of operating system.")
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope="session")
 def browser(request):
     return request.config.getoption("--browser")
+
+
+@pytest.fixture(scope="session")
+def ostype(request):
+    return request.config.getoption("--ostype")
 
