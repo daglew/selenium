@@ -55,21 +55,27 @@ class to test
 """
 
 
-@pytest.fixture()
+@pytest.yield_fixture()
 def setup():
     print("Running method level setup.")
     yield
     print("Running method level teardown.")
 
 
-@pytest.fixture(scope="class")
-def one_time_setup(browser):
+@pytest.yield_fixture(scope="class")
+def one_time_setup(request, browser):
     print("Running one_time_setup.")
     if browser == "firefox":
+        value = 10
         print("Running tests on FF.")
     else:
+        value = 10
         print("Running tests on chrome.")
-    yield
+
+    if request.cls is not None:
+        request.cls.value = value
+
+    yield value
     print("Running one time teardown.")
 
 

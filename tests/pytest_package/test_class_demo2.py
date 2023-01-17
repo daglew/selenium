@@ -5,8 +5,8 @@ from tests.pytest_package.class_to_test import SomeClassToTest
 @pytest.mark.usefixtures("one_time_setup", "setup")
 class TestClassDemo:
     @pytest.fixture(autouse=True)
-    def class_setup(self, one_time_setup):
-        self.abc = SomeClassToTest(self.value)
+    def class_setup(self):
+        self.abc = SomeClassToTest(value=10)
 
     def test_methoda(self):
         result = self.abc.sum_numbers(2, 8)
