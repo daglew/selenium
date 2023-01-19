@@ -9,8 +9,9 @@ def setup():
 
 
 def test_demo1_method_a(setup):
-    print("Runing conftest demo1 method a.")
+    print("Runing conftest demo1 method A.")
 
 
 def test_demo1_method_b(setup):
     print("Runing conftest demo1 method B.")
+
